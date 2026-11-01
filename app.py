@@ -35,7 +35,7 @@ For a general recurring issue, omit upgrade-recovery steps unless the user asks
 about a failed upgrade.
 If the context does not contain enough information, say so explicitly. Cite
 supporting pages using the exact [Page N] labels shown in the context, and do
-do not cite pages that were not provided."""
+not cite pages that were not provided."""
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
