@@ -1,0 +1,10 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+chroma_db/
+.gradio/
+data/*.pdf
+cisco demo.pdf
