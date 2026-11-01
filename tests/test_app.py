@@ -53,6 +53,14 @@ class RagBehaviorTests(unittest.TestCase):
         self.assertIn("Using Diagnostics", messages[0].content)
         self.assertIn("omit upgrade-recovery steps", messages[0].content)
         self.assertIn("[Page 7]", messages[1].content)
+        self.assertIn(
+            "Answer using only this retrieved context.",
+            messages[1].content,
+        )
+        self.assertNotIn(
+            "Return only short, exact source lines",
+            messages[1].content,
+        )
 
     def test_retrieval_context_is_limited_to_five_documents(self):
         retriever = Mock()

@@ -35,7 +35,7 @@ For a general recurring issue, omit upgrade-recovery steps unless the user asks
 about a failed upgrade.
 If the context does not contain enough information, say so explicitly. Cite
 supporting pages using the exact [Page N] labels shown in the context, and do
-not cite pages that were not provided."""
+do not cite pages that were not provided."""
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -138,10 +138,7 @@ User question:
         [
             SystemMessage(content=SYSTEM_PROMPT),
             HumanMessage(
-                content=(
-                    f"{user_prompt}\n\n"
-                    "Return only short, exact source lines that answer the question."
-                )
+                content=f"{user_prompt}\n\nAnswer using only this retrieved context."
             ),
         ]
     )
